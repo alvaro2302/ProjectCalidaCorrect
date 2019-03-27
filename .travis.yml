@@ -5,11 +5,10 @@ addons:
   sonarcloud:
     organization: "alvaro2302-github" # the key of the org you chose at step #3
     token:
-          secure: "oHhHfymm3WjlhG/uhYNUbTxRybCtB7PXgHjgF42kTOdTe2tAXZS/Cl4lr/E1q97Fv79wMkh0rfy2UXb88agR9v0HfmXeQQmyXkSWIeW7FCk6gq6mqnfIIcW4RmfQJMFBa8Zx3I75Ul9hYeCwqEYefsSbTWB7JIXvq8R8y5Tw8b2T2aT1tCvHCCiDkVRkjEnZ9dsW60DJcBxdrgDofFpt3aEDpDiF17A1YDD4cGX8GfAoFpMpCs/zk2ACxJ1xQqiUz05xBwYWwSutH8JgD6qGuJttCWcdEWBg2/2korbQPIxH7ZRvSPP3Zl/bCwSR+eXZvrp58Osq2NK0JwcI9K4ECn+OOVSAI5Sga3s1vd9EIlfOGBhwHirljVVlnSTbHVxNznbt1W+gB+jyx4KpKKs+ghDDV2r3yGKuAdyo0CmM6s0wFsFB66eQqqxTaVPhY2EPuvMPYxxPczfOko1bO2svAnvnZxAZ6hyN+/RE3dCDcNbbHPBzBPIzek2XL1nnCslWN7K3Zt29R/P9+VtYATMjso7H9ZTnEfvO6kGLalw1N+WZhg7XWCpS7mYubJ8O+juUTL9f4tWhAqAFeWVOYg9FOab07BmCkZcljuZ/67M0Hs2+TqkZAyBB2laEUfb2lJViz2mY796Md9VHM58jMtznkAeC3F1NyBfGpTqyt2rKAQw="
-                  # encrypted value of your token
-                  # 30916d7016060bf8408abace01c1da906a53f489 token desencriptado
+      secure: "oHhHfymm3WjlhG/uhYNUbTxRybCtB7PXgHjgF42kTOdTe2tAXZS/Cl4lr/E1q97Fv79wMkh0rfy2UXb88agR9v0HfmXeQQmyXkSWIeW7FCk6gq6mqnfIIcW4RmfQJMFBa8Zx3I75Ul9hYeCwqEYefsSbTWB7JIXvq8R8y5Tw8b2T2aT1tCvHCCiDkVRkjEnZ9dsW60DJcBxdrgDofFpt3aEDpDiF17A1YDD4cGX8GfAoFpMpCs/zk2ACxJ1xQqiUz05xBwYWwSutH8JgD6qGuJttCWcdEWBg2/2korbQPIxH7ZRvSPP3Zl/bCwSR+eXZvrp58Osq2NK0JwcI9K4ECn+OOVSAI5Sga3s1vd9EIlfOGBhwHirljVVlnSTbHVxNznbt1W+gB+jyx4KpKKs+ghDDV2r3yGKuAdyo0CmM6s0wFsFB66eQqqxTaVPhY2EPuvMPYxxPczfOko1bO2svAnvnZxAZ6hyN+/RE3dCDcNbbHPBzBPIzek2XL1nnCslWN7K3Zt29R/P9+VtYATMjso7H9ZTnEfvO6kGLalw1N+WZhg7XWCpS7mYubJ8O+juUTL9f4tWhAqAFeWVOYg9FOab07BmCkZcljuZ/67M0Hs2+TqkZAyBB2laEUfb2lJViz2mY796Md9VHM58jMtznkAeC3F1NyBfGpTqyt2rKAQw=" # encrypted value of your token
 script:
-  # other script steps might be done before running the actual analysis
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 before_install:
   - chmod +x mvnw
+  
