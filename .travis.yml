@@ -3,10 +3,21 @@ sudo: true
 dist: trusty
 addons:
   sonarcloud:
-    organization: alvaro2302-github
+    organization: "alvaro2302-github" # the key of the org you chose at step #3
     token:
-      secure: fd6GXyriwioFsyfFhij1HLRTFq0Lalr0xhG8v1ZYIa/lwySNG2+/usUjcu7lAa9yLRq0/dc91Ek75vaVAQhMZ0T4JRlWHs3kW+6d+3kyUHsHKtHyj82T6IpXtGG3FAUHB7HukY/VxQmmkRMJfjgeGy0uffQObMSMCdfw43huKpAhqmoMpSe4PaPLQFxwzmQtQm5Xrb/iPSAj8FS+yFKP6chfDqb1JSD4hsq7HDArAZD6PkpZM8GBgazyToTrIkSgTlPH55I6i0oWHX/6O7XTttbjyIZ5sPl5AWpAZiJDkV56+a9yYmtfwUunle7fHiacUMNm+y3beGMuI3nIqLLf+SaOm47kYJxSRaF5cD007WQWfmJwakM0BlyOQzcswjfPT7Xs6V5MD8xrtv5yZY1rTXA0Trt+PM4g0A2IRZKvekZauNR23NYGl8zz5Bm+GIQz7jAjBNiZ0iK44XrGt65JrwsIthbjxkzegBY/IgeIrEx2pMPxxPIPprJlGH015npvd38vmDuCzRdQJO1yu9Yss3ML4n+nwt6orqiqIW/tbEReFDTPkRqVD2X4aOrJ2a7eG5tdmJilH2Is8jhWZIiQ64dYF6ShUYyC/xfxliQJzfOJhMl8hRnG2jBZxFMmAgOKH08xiz4wdwmApf5PEhk16oqRThdG34iOf58zSrHJxvk=
+          secure: "mkzAPHld7VnRVpz0PYKl2QMl9Zi1LLZQ0StBPdDeDlrg1xUwpOprNNjg3Vnc1XYjHkTBh
+                  pkT4FjZtpybPqtbfSopx5F3X21mIKWeJ694AyfKLb0kZSn/00QvUFtdYZ9hV29ysTP6CBiN5xpnZxtAO
+                  LsLzmqBeYNQjMl/1FVp0Q4rDqVjwlnWAe85G+uREXytTuwAPrBBAYWQt2sY0M9n8P8jrAXMXR8nRoUUj
+                  gs9csb7wIpZgjfuZyhSg+Y3gFm4MHImz2vjqZz9BwbDJooowhGnFtmexTrWFx4ytpZOlOdYDDTD73tre
+                  tXXxcGAiveyHLyTk3ASYlMdG/4Ih1c29CVqQua+3mHpkeqKw3aMMVukCw5Yfr08q8DJsrNux7OdcSm67
+                  Ch9ypyUypR+Bc658dUMzWeHjqjXiY1Th+pk1cf3qStY79Vm/iYPW/8zPckt+S5ZkjNIGEO7ZAdd3rd10
+                  qXmUzMhZcvlA8jSFDbFat2N5BcV/pWDtKb/JUUmgoKKbnYYzGcq7l6U209PtgaDzNPEJSbLHYZ7oUq6s
+                  E6Vj0rFNObNwIAJUUdMQ9czL+bnB0eHjR27oZ3UZCNrvj+wNqx9oMmRN578CadwBTOLpoPj4BsmrbrsE
+                  asd1GJ3TE5wDPCMEO71QX374hGrpLEFhIQXz8GZqBlhQWypLf7WLJI="
+                  # encrypted value of your token
+                  # caadb6417e36707a21d12dfce25499634ff569d7 token desencriptado
 script:
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  # other script steps might be done before running the actual analysis
+  mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 before_install:
-- chmod +x mvnw
+  - chmod +x mvnw
