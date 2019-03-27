@@ -1,14 +1,12 @@
-
 language: java
 sudo: true
 dist: trusty
 addons:
   sonarcloud:
-    organization: "alvaro2302-github" # the key of the org you chose at step #3
+    organization: alvaro2302-github
     token:
-          secure: ""
-                  # encrypted value of your token
-                  # caadb6417e36707a21d12dfce25499634ff569d7 token desencriptado
+      secure: "XZUW/z14bW3AtGL+O6luf84UgoRFBpQqispI8Fo4riIxYKar6f28+JmByhX9ovlcl/g7LRNAAkQoiGkmAcGDPtI043EmBwUH3uZzq7AkGp0pPVgt9pGsnfgHNfSpLT6oos9Dxj1OQJW8uyf5sCUC578kGVQecnUUmf3eXSH4z2kw/r9m23RXldKbxeHDDX9qyawZ1CHn8eE7XvzeyyDpvxiYENY0J3JKhsbyjOKDiMVGFuhT5pmNG0QS4cBiytOkyTehf0e70dyFa+XQU0cydqfCelncKlSfzLA5v1TzCd392uuGG1crPLpX2cdq0IxplNlxm2hi2QR7z8BXNFCiJwuN5iP9OM1t8Eq987VvXQy/h7e1b84S9MdiVHRG4jI442imv7A+doE8IXxHw6VuBIJ03rPkdW6+PV56NG0K4R97hfFLOXh74RQgtNO0qkclT4HkxCKC6kUctRd4tYcvRidtUAHdknlkMO6U7le557lxeCsATMb4LXk3tUWgR2g4FAFLhNNesCLlVDKTelr97j9ru9qz3inwnpNdWZQF7FlO4OgOMYJ+h1esVarweKrrWyK/1AgDVwAsQcLFHsYPiP8FerPtRNIAttTGUKKkBrCqeasJ9R1jeX5/1NMx8/lO5WLAn+aqwYF5zXHdIMTJ7Wq3OdegZuf4N7bxMnK9TZg="
+
 script:
   # other script steps might be done before running the actual analysis
   mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
