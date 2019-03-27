@@ -10,6 +10,6 @@ addons:
                   # caadb6417e36707a21d12dfce25499634ff569d7 token desencriptado
 script:
   # other script steps might be done before running the actual analysis
-  mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 before_install:
   - chmod +x mvnw
