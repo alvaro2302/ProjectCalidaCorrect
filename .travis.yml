@@ -3,7 +3,7 @@ sudo: true
 dist: trusty
 addons:
   sonarcloud:
-    organization: alvaro2302
+    organization: "alvaro2302-github" # the key of the org you chose at step #3
     token:
           secure: "mkzAPHld7VnRVpz0PYKl2QMl9Zi1LLZQ0StBPdDeDlrg1xUwpOprNNjg3Vnc1XYjHkTBh
                   pkT4FjZtpybPqtbfSopx5F3X21mIKWeJ694AyfKLb0kZSn/00QvUFtdYZ9hV29ysTP6CBiN5xpnZxtAO
