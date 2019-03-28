@@ -3,19 +3,10 @@ sudo: true
 dist: trusty
 addons:
   sonarcloud:
-    organization: "alvaro2302-github" # the key of the org you chose at step #3
+    organization: alvaro2302-github
     token:
-          secure: "mkzAPHld7VnRVpz0PYKl2QMl9Zi1LLZQ0StBPdDeDlrg1xUwpOprNNjg3Vnc1XYjHkTBh
-                  pkT4FjZtpybPqtbfSopx5F3X21mIKWeJ694AyfKLb0kZSn/00QvUFtdYZ9hV29ysTP6CBiN5xpnZxtAO
-                  LsLzmqBeYNQjMl/1FVp0Q4rDqVjwlnWAe85G+uREXytTuwAPrBBAYWQt2sY0M9n8P8jrAXMXR8nRoUUj
-                  gs9csb7wIpZgjfuZyhSg+Y3gFm4MHImz2vjqZz9BwbDJooowhGnFtmexTrWFx4ytpZOlOdYDDTD73tre
-                  tXXxcGAiveyHLyTk3ASYlMdG/4Ih1c29CVqQua+3mHpkeqKw3aMMVukCw5Yfr08q8DJsrNux7OdcSm67
-                  Ch9ypyUypR+Bc658dUMzWeHjqjXiY1Th+pk1cf3qStY79Vm/iYPW/8zPckt+S5ZkjNIGEO7ZAdd3rd10
-                  qXmUzMhZcvlA8jSFDbFat2N5BcV/pWDtKb/JUUmgoKKbnYYzGcq7l6U209PtgaDzNPEJSbLHYZ7oUq6s
-                  E6Vj0rFNObNwIAJUUdMQ9czL+bnB0eHjR27oZ3UZCNrvj+wNqx9oMmRN578CadwBTOLpoPj4BsmrbrsE
-                  asd1GJ3TE5wDPCMEO71QX374hGrpLEFhIQXz8GZqBlhQWypLf7WLJI="
-                  # encrypted value of your token
-                  # caadb6417e36707a21d12dfce25499634ff569d7 token desencriptado
+      secure: "DoFWgVCkp+VOOzzLGhwuK/7tiavcciqyP2wNJ5WCMHtCWMr8F0VWLrmOT93f5n1nCWmWzaM4t2XOJfh9SQXuawZknab+he69L/C61xwhnJCNE1sNpzg3m+HbBos9uvipjf1JV76p4Lj0k3L09B0AGHOBbe8vHimnwETJ9S0FrfUfdrrNgOVE2sgU8qJqP5FS4HMG9qHtbBY/L1AehFn4j9psN9lytaMGu7CnPpwtsUcZoksAEZnoHKeSduBWkAhIk+ltPdPyY9WW7wGIfFDlJA8x1aEbdTXocY0GBy3PEKQ3HKdeJKEWbNrxprZnQWObbCF2PXkEURNKzFGKHxd3rxH4ZgQB8pg5H/SP8H0j/SONUBJpHaO8rr9mD6SMCPEMKpyoai8bdXqeHVvPVnjARKfQ2mOho/V/JkI3RXyFqnLRhfFDPrbGeQjrOwiA7ji7JJRcBFt+7T2V4BNEe5DGmV47DxC5EkPhf3OlvERkjZ+uwh8c2r70YA4twjWRV2rdfRxp3+2ygQ9wYfql07YWOOcm93nUvCO9hxEvG9FRq7JfQgm/6CYLNvxmC3YSaBAFo4YkO7su6nKx6KoVaTAGGZ6kK45FCreu3g5zghNEyL+FeKKXLss6R7uc+TxDCX+R9jTyCy27LALr85yznVjcQKspQLlocXiFcI6U9I2Hhp4="
+
 script:
   # other script steps might be done before running the actual analysis
   mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
