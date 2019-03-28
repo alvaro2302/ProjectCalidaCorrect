@@ -3,12 +3,12 @@ sudo: true
 dist: trusty
 addons:
   sonarcloud:
-    organization: alvaro2302-github
+    organization: "alvaro2302-github"
     token:
       secure: "DoFWgVCkp+VOOzzLGhwuK/7tiavcciqyP2wNJ5WCMHtCWMr8F0VWLrmOT93f5n1nCWmWzaM4t2XOJfh9SQXuawZknab+he69L/C61xwhnJCNE1sNpzg3m+HbBos9uvipjf1JV76p4Lj0k3L09B0AGHOBbe8vHimnwETJ9S0FrfUfdrrNgOVE2sgU8qJqP5FS4HMG9qHtbBY/L1AehFn4j9psN9lytaMGu7CnPpwtsUcZoksAEZnoHKeSduBWkAhIk+ltPdPyY9WW7wGIfFDlJA8x1aEbdTXocY0GBy3PEKQ3HKdeJKEWbNrxprZnQWObbCF2PXkEURNKzFGKHxd3rxH4ZgQB8pg5H/SP8H0j/SONUBJpHaO8rr9mD6SMCPEMKpyoai8bdXqeHVvPVnjARKfQ2mOho/V/JkI3RXyFqnLRhfFDPrbGeQjrOwiA7ji7JJRcBFt+7T2V4BNEe5DGmV47DxC5EkPhf3OlvERkjZ+uwh8c2r70YA4twjWRV2rdfRxp3+2ygQ9wYfql07YWOOcm93nUvCO9hxEvG9FRq7JfQgm/6CYLNvxmC3YSaBAFo4YkO7su6nKx6KoVaTAGGZ6kK45FCreu3g5zghNEyL+FeKKXLss6R7uc+TxDCX+R9jTyCy27LALr85yznVjcQKspQLlocXiFcI6U9I2Hhp4="
 
 script:
   # other script steps might be done before running the actual analysis
-  mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 before_install:
   - chmod +x mvnw
